@@ -6,7 +6,7 @@ import SpecificCrtpto from '../SpecificCrtpto/SpecificCrtpto';
 export default function Dashboard() {
 
   const [ selectedIndex, setSelectedIndex ] = useState(0)
-  const [cryptoName, setCryptoName] = useState(null)
+  const [cryptoName, setCryptoName] = useState("")
   const components = [ <MainDash setSelectedIndex={setSelectedIndex} setCryptoName={setCryptoName}/>, <SpecificCrtpto setSelectedIndex={setSelectedIndex} cryptoName={cryptoName}/>]
 
   return (
