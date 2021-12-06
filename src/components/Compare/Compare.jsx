@@ -18,63 +18,63 @@ export default function Compare() {
 
 
 
-  // const loadData1 = async ( source ) => {  
-  //   setLoading1(true) 
-  //   try {
-  //     let { data } = await axios.get(`https://api.coingecko.com/api/v3/coins/${crypto1}/market_chart?vs_currency=${currency}&days=${noOfDays}`, { cancelToken: source.token })
-  //     let updatedPrices = data.prices.map((price) =>{
-  //       return {
-  //         date : format(new Date(price[0]),"MMM d"),
-  //         price: price[1].toFixed(1)
-  //       }
-  //     })
-  //     setData1(updatedPrices);
-  //     setLoading1(false);
-  //   } catch (error) {
-  //     if (axios.isCancel(error)) return; setLoading1(false);
-  //   }
-  // };
+  const loadData1 = async ( source ) => {  
+    setLoading1(true) 
+    try {
+      let { data } = await axios.get(`https://api.coingecko.com/api/v3/coins/${crypto1}/market_chart?vs_currency=${currency}&days=${noOfDays}`, { cancelToken: source.token })
+      let updatedPrices = data.prices.map((price) =>{
+        return {
+          date : format(new Date(price[0]),"MMM d"),
+          price: price[1].toFixed(1)
+        }
+      })
+      setData1(updatedPrices);
+      setLoading1(false);
+    } catch (error) {
+      if (axios.isCancel(error)) return; setLoading1(false);
+    }
+  };
 
-  // const loadData2 = async ( source ) => {  
-  //   setLoading2(true) 
-  //   try {
-  //     let { data } = await axios.get(`https://api.coingecko.com/api/v3/coins/${crypto2}/market_chart?vs_currency=${currency}&days=${noOfDays}`, { cancelToken: source.token })
-  //     let updatedPrices = data.prices.map((price) =>{
-  //       return {
-  //         date : format(new Date(price[0]),"MMM d"),
-  //         price: price[1].toFixed(1)
-  //       }
-  //     })
-  //     setData2(updatedPrices);
-  //     setLoading2(false);
-  //   } catch (error) {
-  //     if (axios.isCancel(error)) return; setLoading2(false);
-  //   }
-  // };
+  const loadData2 = async ( source ) => {  
+    setLoading2(true) 
+    try {
+      let { data } = await axios.get(`https://api.coingecko.com/api/v3/coins/${crypto2}/market_chart?vs_currency=${currency}&days=${noOfDays}`, { cancelToken: source.token })
+      let updatedPrices = data.prices.map((price) =>{
+        return {
+          date : format(new Date(price[0]),"MMM d"),
+          price: price[1].toFixed(1)
+        }
+      })
+      setData2(updatedPrices);
+      setLoading2(false);
+    } catch (error) {
+      if (axios.isCancel(error)) return; setLoading2(false);
+    }
+  };
 
 
-  // useEffect(() => {
-  //   let source = axios.CancelToken.source();
-  //   loadData1(source);
-  //   return () => {
-  //     source.cancel();
-  //   };
-  // }, [noOfDays, currency, crypto1]);
+  useEffect(() => {
+    let source = axios.CancelToken.source();
+    loadData1(source);
+    return () => {
+      source.cancel();
+    };
+  }, [noOfDays, currency, crypto1]);
 
-  // useEffect(() => {
-  //   let source = axios.CancelToken.source();
-  //   loadData2(source);
-  //   return () => {
-  //     source.cancel();
-  //   };
-  // }, [noOfDays, currency, crypto2]);
+  useEffect(() => {
+    let source = axios.CancelToken.source();
+    loadData2(source);
+    return () => {
+      source.cancel();
+    };
+  }, [noOfDays, currency, crypto2]);
 
-  // useEffect(() => {
-  //   const noOfDays = document.getElementById('noofdays1')
-  //   const currency = document.getElementById('currency1')
-  //   noOfDays.checked = true;
-  //   currency.checked = true;
-  // },[])
+  useEffect(() => {
+    const noOfDays = document.getElementById('noofdays1')
+    const currency = document.getElementById('currency1')
+    noOfDays.checked = true;
+    currency.checked = true;
+  },[])
 
 
   return (
@@ -124,7 +124,7 @@ export default function Compare() {
         </div>
 
 
-      {/* {loading1? (
+      {loading1? (
         <div className={styles.loadinggif}>
           <img src={loadinggif} alt="Loading" />
         </div>
@@ -152,10 +152,10 @@ export default function Compare() {
           </AreaChart>
         </ResponsiveContainer>
         <div className={styles.crypto1}>{crypto1.toUpperCase()}</div>
-      </div>)} */}
+      </div>)}
 
 
-      {/* {loading2? (
+      {loading2? (
         <div className={styles.loadinggif}>
           <img src={loadinggif} alt="Loading" />
         </div>
@@ -183,24 +183,24 @@ export default function Compare() {
           </AreaChart>
         </ResponsiveContainer>
         <div className={styles.crypto1}>{crypto2.toUpperCase()}</div>
-      </div>)} */}
+      </div>)}
 
       </div>
     </div>
   )
 }
 
-// function CustomToolTip({ active, payload, label, currency}){
-//   if(active){
-//     return (
-//       <div className={styles.tooltip}>
-//         <h4 className={styles.label}>{label}</h4>
-//         <p className={styles.value}>
-//           {payload[0].value} {currency}
-//         </p>
-//       </div>
-//     )
-//   }
-//   return null;
-// }
+function CustomToolTip({ active, payload, label, currency}){
+  if(active){
+    return (
+      <div className={styles.tooltip}>
+        <h4 className={styles.label}>{label}</h4>
+        <p className={styles.value}>
+          {payload[0].value} {currency}
+        </p>
+      </div>
+    )
+  }
+  return null;
+}
 
