@@ -7,46 +7,46 @@ import loadinggif from '../../images/loading.gif'
 import { format } from 'date-fns'
 
 export default function MarketCap() {
-  const [ crypto, setCrypto ] = useState('bitcoin')
-  const [ currency, setCurrency ] = useState("usd");
-  const [ noOfDays, setNoOfDays ] = useState(7);
-  const [ data, setData ] = useState([]);
-  const [ loading, setLoading ] = useState(true)
+  // const [ crypto, setCrypto ] = useState('bitcoin')
+  // const [ currency, setCurrency ] = useState("usd");
+  // const [ noOfDays, setNoOfDays ] = useState(7);
+  // const [ data, setData ] = useState([]);
+  // const [ loading, setLoading ] = useState(true)
 
 
 
-  const loadData = async ( source ) => {  
-    setLoading(true) 
-    try {
-      let { data } = await axios.get(`https://api.coingecko.com/api/v3/coins/${crypto}/market_chart?vs_currency=${currency}&days=${noOfDays}`, { cancelToken: source.token })
-      let updatedPrices = data.prices.map((price) =>{
-        return {
-          date : format(new Date(price[0]),"MMM d"),
-          price: price[1].toFixed(1)
-        }
-      })
-      setData(updatedPrices);
-      setLoading(false);
-    } catch (error) {
-      if (axios.isCancel(error)) return; setLoading(false);
-    }
-  };
+  // const loadData = async ( source ) => {  
+  //   setLoading(true) 
+  //   try {
+  //     let { data } = await axios.get(`https://api.coingecko.com/api/v3/coins/${crypto}/market_chart?vs_currency=${currency}&days=${noOfDays}`, { cancelToken: source.token })
+  //     let updatedPrices = data.prices.map((price) =>{
+  //       return {
+  //         date : format(new Date(price[0]),"MMM d"),
+  //         price: price[1].toFixed(1)
+  //       }
+  //     })
+  //     setData(updatedPrices);
+  //     setLoading(false);
+  //   } catch (error) {
+  //     if (axios.isCancel(error)) return; setLoading(false);
+  //   }
+  // };
 
 
-  useEffect(() => {
-    let source = axios.CancelToken.source();
-    loadData(source);
-    return () => {
-      source.cancel();
-    };
-  }, [noOfDays, currency, crypto]);
+  // useEffect(() => {
+  //   let source = axios.CancelToken.source();
+  //   loadData(source);
+  //   return () => {
+  //     source.cancel();
+  //   };
+  // }, [noOfDays, currency, crypto]);
 
-  useEffect(() => {
-    const noOfDays = document.getElementById('noofdays1')
-    const currency = document.getElementById('currency1')
-    noOfDays.checked = true;
-    currency.checked = true;
-  },[])
+  // useEffect(() => {
+  //   const noOfDays = document.getElementById('noofdays1')
+  //   const currency = document.getElementById('currency1')
+  //   noOfDays.checked = true;
+  //   currency.checked = true;
+  // },[])
 
 
   return (
@@ -55,7 +55,7 @@ export default function MarketCap() {
       <div className={styles.dashcontainertitle}>
         MarketCap
       </div>
-
+{/* 
       <div className={styles.content}>
         <div className={styles.innercontent}>
           <div className={styles.allcryptos}>
@@ -114,23 +114,22 @@ export default function MarketCap() {
         </ResponsiveContainer>
       </div>)}
 
-      </div>
-
-
+      </div> */}
+      
     </div>
   )
 }
 
-function CustomToolTip({ active, payload, label, currency}){
-  if(active){
-    return (
-      <div className={styles.tooltip}>
-        <h4 className={styles.label}>{label}</h4>
-        <p className={styles.value}>
-          {payload[0].value} {currency}
-        </p>
-      </div>
-    )
-  }
-  return null;
-}
+// function CustomToolTip({ active, payload, label, currency}){
+//   if(active){
+//     return (
+//       <div className={styles.tooltip}>
+//         <h4 className={styles.label}>{label}</h4>
+//         <p className={styles.value}>
+//           {payload[0].value} {currency}
+//         </p>
+//       </div>
+//     )
+//   }
+//   return null;
+// }

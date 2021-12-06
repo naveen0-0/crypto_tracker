@@ -11,50 +11,51 @@ import Security from '../Security/Security';
 
 export default function SpecificCrtpto({ setSelectedIndex, cryptoName }) {
 
-  const [ profile, setProfile ] = useState(null);
-  const [ price, setPrice ] = useState(null);
-  const [ loading, setLoading ] = useState(true);
-  const [priceLoading, setPriceLoading] = useState(true)
+  // const [ profile, setProfile ] = useState(null);
+  // const [ price, setPrice ] = useState(null);
+  // const [ loading, setLoading ] = useState(true);
+  // const [priceLoading, setPriceLoading] = useState(true)
 
-  //* Profiles
-  //* Metrics
-  //* Price (EVERY SECOND)
-  //TODO https://data.messari.io/api/v1/assets/bitcoin/metrics/market-data
-  useEffect(() => {
-    getProfile();
-  },[])
+  // //* Profiles
+  // //* Metrics
+  // //* Price (EVERY SECOND)
+  // //TODO https://data.messari.io/api/v1/assets/bitcoin/metrics/market-data
+  // useEffect(() => {
+  //   getProfile();
+  // },[])
   
-  const getProfile = async () => {
-    const { data } = await axios.get(`https://data.messari.io/api/v2/assets/${cryptoName}/profile`);
-    setProfile(data.data);
-    setLoading(false)
-  }
+  // const getProfile = async () => {
+  //   const { data } = await axios.get(`https://data.messari.io/api/v2/assets/${cryptoName}/profile`);
+  //   setProfile(data.data);
+  //   setLoading(false)
+  // }
 
-  useEffect(() => {
-    let source = axios.CancelToken.source();
-    const loadData = () => {
-        axios.get(`https://data.messari.io/api/v1/assets/${cryptoName}/metrics/market-data`, { cancelToken: source.token })
-            .then(response => {setPrice(response.data.data) })
-            .catch(error => {
-                if (axios.isCancel(error)) {
-                  } else return
-            })
-    };
+  // useEffect(() => {
+  //   let source = axios.CancelToken.source();
+  //   const loadData = () => {
+  //       axios.get(`https://data.messari.io/api/v1/assets/${cryptoName}/metrics/market-data`, { cancelToken: source.token })
+  //           .then(response => {setPrice(response.data.data) })
+  //           .catch(error => {
+  //               if (axios.isCancel(error)) {
+  //                 } else return
+  //           })
+  //   };
     
-    setInterval(() => {
-      loadData();
-    },2000)
+  //   setInterval(() => {
+  //     loadData();
+  //   },2000)
 
-    return () => {
-      source.cancel();
-    };
-  }, []);
+  //   return () => {
+  //     source.cancel();
+  //   };
+  // }, []);
 
   
 
   return (
     <div className={styles.content}>
-      <div className={styles.head}>
+      Specific Crypto
+      {/* <div className={styles.head}>
         <div onClick={() => setSelectedIndex(0)} className={styles.backC}>
           <img src={backimg} alt="Back" className={styles.back}/>
         </div>
@@ -111,7 +112,7 @@ export default function SpecificCrtpto({ setSelectedIndex, cryptoName }) {
           <div className={styles.background}>
             <details className={styles.details}>
               <div className={styles.backgroundcontri}>
-                {/* //todo Individual Contributors */}
+    
                 {profile.profile.contributors.individuals.map((individual, index) =><Contributor key={index} contributor={individual}/> )}
               </div>
               <summary className={styles.summary}>
@@ -120,7 +121,7 @@ export default function SpecificCrtpto({ setSelectedIndex, cryptoName }) {
             </details>
             <details className={styles.details}>
               <div className={styles.backgroundcontri}>
-                {/* //todo Organization Contributors */}
+
                 {profile.profile.contributors.organizations.map((organization, index) => <OrganizationContributor key={index} contributor={organization}/> )}
               </div>
               <summary className={styles.summary}>
@@ -133,7 +134,7 @@ export default function SpecificCrtpto({ setSelectedIndex, cryptoName }) {
           </summary>
         </details>
 
-        {/* //todo Investors */}
+
 
         <details className={styles.details}>
           <div className={styles.backgroundcontri}>
@@ -144,7 +145,7 @@ export default function SpecificCrtpto({ setSelectedIndex, cryptoName }) {
           </summary>
         </details>
 
-        {/* //todo Technology */}
+
         <details className={styles.details}>
           <div className={styles.background}>
             {ReactHtmlParser(profile.profile.technology.overview.technology_details)}
@@ -154,7 +155,7 @@ export default function SpecificCrtpto({ setSelectedIndex, cryptoName }) {
           </summary>
         </details>
 
-        {/* //todo Governance */}
+
         <details className={styles.details}>
           <div className={styles.background}>
             {ReactHtmlParser(profile.profile.governance.governance_details)}
@@ -164,7 +165,7 @@ export default function SpecificCrtpto({ setSelectedIndex, cryptoName }) {
           </summary>
         </details>
 
-        {/* //todo Security */}
+
         <details className={styles.security_details}>
           <div className={styles.security}>
             {profile.profile.technology.security.known_exploits_and_vulnerabilities.map((security, index) => <Security key={index} security={security}/> )}
@@ -175,7 +176,7 @@ export default function SpecificCrtpto({ setSelectedIndex, cryptoName }) {
         </details>
 
       </div>
-      )}
+      )} */}
 
     </div>
   )

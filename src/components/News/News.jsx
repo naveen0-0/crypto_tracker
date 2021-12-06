@@ -7,34 +7,34 @@ import loadinggif from '../../images/loading.gif'
 
 
 export default function Wallet() {
-  const [newsSection, setNewsSection] = useState("");
-  const [articles, setArticles] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // const [newsSection, setNewsSection] = useState("");
+  // const [articles, setArticles] = useState([]);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetchArticles();
-  },[newsSection])
+  // useEffect(() => {
+  //   fetchArticles();
+  // },[newsSection])
 
-  const fetchArticles = async () => {
-    setLoading(true)
-    if(newsSection===""){
-      let { data } = await axios.get("https://data.messari.io/api/v1/news")
-      setLoading(false)
-      if(data.data){
-        setArticles(data.data)
-      }else{
-        setArticles([])
-      }
-    }else{
-      let { data } = await axios.get(`https://data.messari.io/api/v1/news/${newsSection}`)
-      setLoading(false)
-      if(data.data){
-        setArticles(data.data)
-      }else{
-        setArticles([])
-      }
-    }
-  }
+  // const fetchArticles = async () => {
+  //   setLoading(true)
+  //   if(newsSection===""){
+  //     let { data } = await axios.get("https://data.messari.io/api/v1/news")
+  //     setLoading(false)
+  //     if(data.data){
+  //       setArticles(data.data)
+  //     }else{
+  //       setArticles([])
+  //     }
+  //   }else{
+  //     let { data } = await axios.get(`https://data.messari.io/api/v1/news/${newsSection}`)
+  //     setLoading(false)
+  //     if(data.data){
+  //       setArticles(data.data)
+  //     }else{
+  //       setArticles([])
+  //     }
+  //   }
+  // }
 
   return (
     <div className={styles.newscontainer}>
@@ -50,7 +50,7 @@ export default function Wallet() {
         </div>
       </div>
 
-      <div className={styles.content}>
+      {/* <div className={styles.content}>
         {loading?(
           <div className={styles.loadinggif}>
             <img src={loadinggif} alt="Loading" />
@@ -65,7 +65,7 @@ export default function Wallet() {
             )}
           </div>
         )}
-      </div>
+      </div> */}
 
     </div>
   )
