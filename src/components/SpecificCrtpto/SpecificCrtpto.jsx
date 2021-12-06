@@ -4,7 +4,7 @@ import axios from 'axios'
 // import loadinggif from '../../images/loading.gif'
 import loadinggif from '../../images/loading.gif'
 // import ReactHtmlParser from "react-html-parser";
-import ReactHtmlParser from 'react-html-parser'
+// import ReactHtmlParser from 'react-html-parser'
 // import backimg from '../../images/back.png'
 // import Contributor from '../Contributor/Contributor';
 // import OrganizationContributor from '../OrganizationContributor/OrganizationContributor';
