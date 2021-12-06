@@ -10,7 +10,7 @@ import Settings from '../Settings/Settings'
 export default function HomePage() {
   let components = [<Dashboard/>,<MarketCap/>,<Compare/>,<News/>,<Settings/>]
   
-  const [selectedIndex, setSelectedIndex] = useState(3)
+  const [selectedIndex, setSelectedIndex] = useState(4)
 
   return (
     <div className={styles.main}>
