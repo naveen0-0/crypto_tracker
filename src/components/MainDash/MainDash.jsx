@@ -9,27 +9,27 @@ export default function MainDash({ setSelectedIndex, setCryptoName }) {
   const [loading, setLoading] = useState(true);
   
 
-  // useEffect(() => {
-  //   let source = axios.CancelToken.source();
-  //   const loadData = () => {
-  //       axios.get(`https://data.messari.io/api/v2/assets?fields=slug,metrics/market_data/price_usd`, { cancelToken: source.token })
-  //           .then(response => {setCoins(response.data.data);setLoading(false); })
-  //           .catch(error => {
-  //               if (axios.isCancel(error)) {
-  //                 } else {
-  //                   setLoading(false);
-  //                 }
-  //           })
-  //   };
+  useEffect(() => {
+    let source = axios.CancelToken.source();
+    const loadData = () => {
+        axios.get(`https://data.messari.io/api/v2/assets?fields=slug,metrics/market_data/price_usd`, { cancelToken: source.token })
+            .then(response => {setCoins(response.data.data);setLoading(false); })
+            .catch(error => {
+                if (axios.isCancel(error)) {
+                  } else {
+                    setLoading(false);
+                  }
+            })
+    };
     
-  //   setInterval(() => {
-  //     loadData();
-  //   },2000)
+    setInterval(() => {
+      loadData();
+    },2000)
 
-  //   return () => {
-  //     source.cancel();
-  //   };
-  // }, []);
+    return () => {
+      source.cancel();
+    };
+  }, []);
 
   return (
       <div className={styles.content}>

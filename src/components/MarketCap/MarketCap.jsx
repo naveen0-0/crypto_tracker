@@ -2,7 +2,7 @@ import React,{ useEffect, useState } from 'react'
 import styles from './MarketCap.module.css'
 import axios from 'axios'
 import { graphCryptos1 } from '../../utils/cryptos'
-import { AreaChart,XAxis, YAxis, CartesianGrid, Tooltip, Area, ResponsiveContainer, LineChart } from 'recharts'
+import { AreaChart,XAxis, YAxis, Tooltip, Area, ResponsiveContainer } from 'recharts'
 import loadinggif from '../../images/loading.gif'
 import { format } from 'date-fns'
 
@@ -15,38 +15,38 @@ export default function MarketCap() {
 
 
 
-  // const loadData = async ( source ) => {  
-  //   setLoading(true) 
-  //   try {
-  //     let { data } = await axios.get(`https://api.coingecko.com/api/v3/coins/${crypto}/market_chart?vs_currency=${currency}&days=${noOfDays}`, { cancelToken: source.token })
-  //     let updatedPrices = data.prices.map((price) =>{
-  //       return {
-  //         date : format(new Date(price[0]),"MMM d"),
-  //         price: price[1].toFixed(1)
-  //       }
-  //     })
-  //     setData(updatedPrices);
-  //     setLoading(false);
-  //   } catch (error) {
-  //     if (axios.isCancel(error)) return; setLoading(false);
-  //   }
-  // };
+  const loadData = async ( source ) => {  
+    setLoading(true) 
+    try {
+      let { data } = await axios.get(`https://api.coingecko.com/api/v3/coins/${crypto}/market_chart?vs_currency=${currency}&days=${noOfDays}`, { cancelToken: source.token })
+      let updatedPrices = data.prices.map((price) =>{
+        return {
+          date : format(new Date(price[0]),"MMM d"),
+          price: price[1].toFixed(1)
+        }
+      })
+      setData(updatedPrices);
+      setLoading(false);
+    } catch (error) {
+      if (axios.isCancel(error)) return; setLoading(false);
+    }
+  };
 
 
-  // useEffect(() => {
-  //   let source = axios.CancelToken.source();
-  //   loadData(source);
-  //   return () => {
-  //     source.cancel();
-  //   };
-  // }, [noOfDays, currency, crypto]);
+  useEffect(() => {
+    let source = axios.CancelToken.source();
+    loadData(source);
+    return () => {
+      source.cancel();
+    };
+  }, [noOfDays, currency, crypto]);
 
-  // useEffect(() => {
-  //   const noOfDays = document.getElementById('noofdays1')
-  //   const currency = document.getElementById('currency1')
-  //   noOfDays.checked = true;
-  //   currency.checked = true;
-  // },[])
+  useEffect(() => {
+    const noOfDays = document.getElementById('noofdays1')
+    const currency = document.getElementById('currency1')
+    noOfDays.checked = true;
+    currency.checked = true;
+  },[])
 
 
   return (

@@ -14,7 +14,7 @@ export default function Dashboard() {
       <div className={styles.dashcontainer}>
         <div className={styles.dashcontainertitle}>Dashboard</div>
       </div>
-      {/* {components[selectedIndex]} */}
+      {components[selectedIndex]}
     </div>
   )
 }
