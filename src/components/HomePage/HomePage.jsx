@@ -17,9 +17,9 @@ export default function HomePage() {
       <div className={styles.sidebarcontainer}>
         <Sidebar index={selectedIndex} setIndex={setSelectedIndex}/>
       </div>
-      {/* <div className={styles.component}>
+      <div className={styles.component}>
         {components[selectedIndex]}
-      </div> */}
+      </div>
     </div>
   )
 }

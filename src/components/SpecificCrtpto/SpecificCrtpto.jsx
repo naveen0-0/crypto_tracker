@@ -16,39 +16,39 @@ export default function SpecificCrtpto({ setSelectedIndex, cryptoName }) {
   const [ loading, setLoading ] = useState(true);
   const [priceLoading, setPriceLoading] = useState(true)
 
-  //* Profiles
-  //* Metrics
-  //* Price (EVERY SECOND)
-  //TODO https://data.messari.io/api/v1/assets/bitcoin/metrics/market-data
-  useEffect(() => {
-    getProfile();
-  },[])
+  // //* Profiles
+  // //* Metrics
+  // //* Price (EVERY SECOND)
+  // //TODO https://data.messari.io/api/v1/assets/bitcoin/metrics/market-data
+  // useEffect(() => {
+  //   getProfile();
+  // },[])
   
-  const getProfile = async () => {
-    const { data } = await axios.get(`https://data.messari.io/api/v2/assets/${cryptoName}/profile`);
-    setProfile(data.data);
-    setLoading(false)
-  }
+  // const getProfile = async () => {
+  //   const { data } = await axios.get(`https://data.messari.io/api/v2/assets/${cryptoName}/profile`);
+  //   setProfile(data.data);
+  //   setLoading(false)
+  // }
 
-  useEffect(() => {
-    let source = axios.CancelToken.source();
-    const loadData = () => {
-        axios.get(`https://data.messari.io/api/v1/assets/${cryptoName}/metrics/market-data`, { cancelToken: source.token })
-            .then(response => {setPrice(response.data.data) })
-            .catch(error => {
-                if (axios.isCancel(error)) {
-                  } else return
-            })
-    };
+  // useEffect(() => {
+  //   let source = axios.CancelToken.source();
+  //   const loadData = () => {
+  //       axios.get(`https://data.messari.io/api/v1/assets/${cryptoName}/metrics/market-data`, { cancelToken: source.token })
+  //           .then(response => {setPrice(response.data.data) })
+  //           .catch(error => {
+  //               if (axios.isCancel(error)) {
+  //                 } else return
+  //           })
+  //   };
     
-    setInterval(() => {
-      loadData();
-    },2000)
+  //   setInterval(() => {
+  //     loadData();
+  //   },2000)
 
-    return () => {
-      source.cancel();
-    };
-  }, []);
+  //   return () => {
+  //     source.cancel();
+  //   };
+  // }, []);
 
   
 
