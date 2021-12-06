@@ -33,7 +33,7 @@ export default function SpecificCrtpto({ setSelectedIndex, cryptoName }) {
   useEffect(() => {
     let source = axios.CancelToken.source();
     const loadData = () => {
-        axios.get(`https://data.messari.io/api/v1/assets/bitcoin/metrics/market-data`, { cancelToken: source.token })
+        axios.get(`https://data.messari.io/api/v1/assets/${cryptoName}/metrics/market-data`, { cancelToken: source.token })
             .then(response => {setPrice(response.data.data) })
             .catch(error => {
                 if (axios.isCancel(error)) {
