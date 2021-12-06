@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from 'react'
 import styles from './Compare.module.css'
 import { graphCryptos1, graphCryptos2 } from '../../utils/cryptos'
-// import axios from 'axios'
-// import { AreaChart,XAxis, YAxis, Tooltip, Area, ResponsiveContainer } from 'recharts'
-// import loadinggif from '../../images/loading.gif'
-// import { format } from 'date-fns'
+import axios from 'axios'
+import { AreaChart,XAxis, YAxis, Tooltip, Area, ResponsiveContainer } from 'recharts'
+import loadinggif from '../../images/loading.gif'
+import { format } from 'date-fns'
 
 export default function Compare() {
-  // const [ crypto1, setCrypto1 ] = useState('bitcoin')
-  // const [ crypto2, setCrypto2 ] = useState('ethereum')
-  // const [ currency, setCurrency ] = useState("usd");
-  // const [ noOfDays, setNoOfDays ] = useState(7);
-  // const [ data1, setData1 ] = useState([]);
-  // const [ data2, setData2 ] = useState([]);
-  // const [ loading1, setLoading1 ] = useState(true)
-  // const [ loading2, setLoading2 ] = useState(true);
+  const [ crypto1, setCrypto1 ] = useState('bitcoin')
+  const [ crypto2, setCrypto2 ] = useState('ethereum')
+  const [ currency, setCurrency ] = useState("usd");
+  const [ noOfDays, setNoOfDays ] = useState(7);
+  const [ data1, setData1 ] = useState([]);
+  const [ data2, setData2 ] = useState([]);
+  const [ loading1, setLoading1 ] = useState(true)
+  const [ loading2, setLoading2 ] = useState(true);
 
 
 
