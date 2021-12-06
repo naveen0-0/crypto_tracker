@@ -1,0 +1,29 @@
+.article{
+  min-height: 150px;
+  padding: 10px;
+  border-radius: 5px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+  position: relative;
+  background-color: #121317;
+}
+
+.title{
+  text-align: center;
+  color: #62CAC2;
+  margin-bottom: 20px;
+}
+
+.author{
+  text-align: right;
+  color: orange;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  padding: 5px;
+}

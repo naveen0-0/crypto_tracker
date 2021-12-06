@@ -1,0 +1,75 @@
+.sidebar{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  min-height: 100vh;
+}
+
+
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-family: "Roboto"
+}
+
+.mainimg{
+  width: 25px;
+}
+
+.sidebarlinks{
+  margin-top: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sidebarlink{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  font-family: cursive;
+  padding: 10px;
+  text-align: center;
+}
+
+.sidebarlink img{
+  width: 30px;
+}
+
+.sidebarlinktext{
+  width: 100%;
+  margin-left: 15px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 999999999px;
+}
+
+.sidebarlinktext:hover{
+  background-color: rgb(39, 39, 39);
+}
+
+.sidebarlinktextactive{
+  width: 100%;
+  margin-left: 15px;
+  color: black;
+  cursor: pointer;
+  background:linear-gradient(to left, rgb(76, 204, 119), rgb(116, 199, 255));
+  padding: 10px;
+  border-radius: 999999999px;
+}
+
+
+
+.titletext{
+  margin-left: 10px;
+}
+
+.sidebarlinkactive{
+  background-color: tomato;
+}

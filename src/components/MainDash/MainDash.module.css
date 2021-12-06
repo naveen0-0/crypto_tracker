@@ -1,0 +1,68 @@
+.content{
+  flex: 1;
+  background-color: #09090B;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  overflow-y: scroll;
+}
+.content::-webkit-scrollbar {
+  width: 5px;
+}
+.content::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+.content::-webkit-scrollbar-thumb {
+  background: rgb(112, 112, 112); 
+  border-radius: 10px;
+}
+
+.coins{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  background-color: #09090B;
+  padding: 10px;
+}
+
+.coin{
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #121317;
+
+}
+
+.loadinggif{
+  background-color: #09090B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.loadinggif img{
+  background-color: #09090B;
+  width: 100px;
+}
+
+.name{
+  font-size: 16px;
+  color: rgb(128, 129, 131);
+  font-weight: bold;
+}
+
+.price{
+  font-size: 30px;
+  color: rgb(0, 183, 255);
+  font-weight: bold;
+}
+
+span{
+  color: orange;
+  font-size: 24px;
+}

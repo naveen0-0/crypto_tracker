@@ -1,0 +1,103 @@
+.newscontainer{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: 100vh;
+  background-color: #121317;
+}
+
+.select{
+  outline: none;
+  padding: 5px 10px; 
+  font-family: "lato";
+  font-size: 14px;
+  border-radius: 5px;
+  background-color: #08090e;
+  cursor: pointer;
+}
+.select::-webkit-scrollbar {
+  width: 5px;
+}
+.select::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+.select::-webkit-scrollbar-thumb {
+  background: rgb(112, 112, 112); 
+  border-radius: 10px;
+}
+
+.option{
+  background-color: #08090e;
+}
+
+.head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding:10px;
+  background-color: #121317;
+}
+
+.news{
+  font-size: 32px;
+  font-family: "Fira Code";
+}
+
+.content{
+  background-color: #09090B;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  flex: 1;
+  overflow-y: scroll;
+}
+
+.content::-webkit-scrollbar {
+  width: 5px;
+}
+
+.content::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: rgb(112, 112, 112); 
+  border-radius: 10px;
+}
+
+
+.articles{
+  padding: 10px;
+  background-color: #09090B;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr))
+}
+
+.articlesC{
+  border-radius: 20px;
+  background-color: #09090B;
+  
+}
+
+.readmore{
+  text-align: center;
+  padding: 10px;
+  margin: 0px 10px;
+  color: salmon;
+  background-color: #121317;
+}
+
+.loadinggif{
+  background-color: #09090B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.loadinggif img{
+  background-color: #09090B;
+  width: 100px;
+}

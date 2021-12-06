@@ -1,0 +1,130 @@
+.container{
+  background-color: #121317;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.radio_input{
+  display: none;
+}
+
+.innercontent{
+  background-color: #09090B;
+}
+
+.radio{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #09090B;
+}
+
+.graph,.innergraph{
+  background-color: #09090B;
+}
+
+.radio_label{
+  margin: 20px 10px;
+  background: rgb(39, 39, 38);  
+  padding: 6px 14px;
+  cursor: pointer;
+  border-radius: 9999999px;
+  color: rgb(182, 182, 182);
+  text-align: center;
+  font-size: 14px;
+}
+
+.radio_input:checked + .radio_label{
+  color: rgb(39, 39, 38);
+  background-color: whitesmoke;
+}
+
+.allcryptos{
+  padding: 20px;
+  width: 80%;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #09090B;
+}
+
+.select{
+  width:100%;
+  margin: 10px;
+  outline: none;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid rgb(16, 104, 97);
+  border-radius: 3px;
+  background-color: #09090B;
+}
+
+.loadinggif{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #09090B;
+}
+
+.loadinggif img{
+  width: 80px;
+  display: block;
+  margin: auto;
+  background-color: #09090B;
+}
+
+.dashcontainertitle{
+  font-size: 32px;
+  font-family: Roboto;
+  padding: 10px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Fira Code";
+}
+
+.content{
+  background-color: #09090B;
+  padding: 10px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-radius: 5px;
+  margin: 10px;
+  flex: 1;
+}
+
+.content::-webkit-scrollbar {
+  width: 5px;
+}
+
+.content::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: rgb(112, 112, 112); 
+  border-radius: 10px;
+}
+
+
+.tooltip{
+  padding: 10px;
+  background-color: rgb(73, 73, 73);
+}
+
+.label{
+  background-color: rgb(73, 73, 73);
+}
+
+.value{
+  background-color: rgb(73, 73, 73);
+}
+
+.crypto1{
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 20px;
+  letter-spacing: 1px;
+}

@@ -1,0 +1,13 @@
+.main{
+  display: flex;
+}
+
+.sidebarcontainer{
+  width: 220px;
+  background-color: #121317;
+  color: #EFEFF0;
+}
+
+.component{
+  flex: 1;
+}

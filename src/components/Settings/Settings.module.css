@@ -1,0 +1,44 @@
+.settings{
+  background-color: #121317;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.head{
+  background-color: #121317;
+  height: 80px;
+  font-size: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Fira Code";
+}
+
+.content{
+  background-color: #09090B;
+  flex: 1;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-y:scroll ;
+
+  /* Remove this css when you decide to include some settings */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.content::-webkit-scrollbar {
+  width: 5px;
+}
+
+.content::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: rgb(112, 112, 112); 
+  border-radius: 10px;
+}

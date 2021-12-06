@@ -1,0 +1,24 @@
+.contributor{
+  background-color: #050506;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.avatar_url{
+  background-color: #000000;
+}
+
+.avatar_img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: auto;
+  display: block;
+}
+
+.name,.title{
+  background-color: #000000;
+  text-align: center;
+  margin: 10px 0px;
+  padding: 10px 0px;
+}
