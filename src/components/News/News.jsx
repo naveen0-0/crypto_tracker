@@ -50,7 +50,7 @@ export default function Wallet() {
         </div>
       </div>
 
-      {/* <div className={styles.content}>
+      <div className={styles.content}>
         {loading?(
           <div className={styles.loadinggif}>
             <img src={loadinggif} alt="Loading" />
@@ -65,7 +65,7 @@ export default function Wallet() {
             )}
           </div>
         )}
-      </div> */}
+      </div>
 
     </div>
   )
