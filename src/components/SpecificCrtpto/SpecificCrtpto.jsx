@@ -1,20 +1,20 @@
 import React,{ useState, useEffect } from 'react'
 import styles from './SpecificCrtpto.module.css'
-// import axios from 'axios';
-// import loadinggif from '../../images/loading.gif'
-// import ReactHtmlParser from "react-html-parser";
-// import backimg from '../../images/back.png'
-// import Contributor from '../Contributor/Contributor';
-// import OrganizationContributor from '../OrganizationContributor/OrganizationContributor';
-// import Investor from '../Investor/Investor';
-// import Security from '../Security/Security';
+import axios from 'axios';
+import loadinggif from '../../images/loading.gif'
+import ReactHtmlParser from "react-html-parser";
+import backimg from '../../images/back.png'
+import Contributor from '../Contributor/Contributor';
+import OrganizationContributor from '../OrganizationContributor/OrganizationContributor';
+import Investor from '../Investor/Investor';
+import Security from '../Security/Security';
 
 export default function SpecificCrtpto({ setSelectedIndex, cryptoName }) {
 
-  // const [ profile, setProfile ] = useState(null);
-  // const [ price, setPrice ] = useState(null);
-  // const [ loading, setLoading ] = useState(true);
-  // const [priceLoading, setPriceLoading] = useState(true)
+  const [ profile, setProfile ] = useState(null);
+  const [ price, setPrice ] = useState(null);
+  const [ loading, setLoading ] = useState(true);
+  const [priceLoading, setPriceLoading] = useState(true)
 
   // //* Profiles
   // //* Metrics
