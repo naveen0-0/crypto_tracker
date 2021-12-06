@@ -2,8 +2,8 @@ import React,{ useEffect, useState } from 'react'
 import styles from './News.module.css'
 import axios from 'axios'
 import { cryptos } from '../../utils/cryptos'
-import Article from '../Article/Article'
-import loadinggif from '../../images/loading.gif'
+// import Article from '../Article/Article'
+// import loadinggif from '../../images/loading.gif'
 
 
 export default function Wallet() {

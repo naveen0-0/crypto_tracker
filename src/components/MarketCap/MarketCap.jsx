@@ -1,10 +1,10 @@
 import React,{ useEffect, useState } from 'react'
 import styles from './MarketCap.module.css'
-import axios from 'axios'
-import { graphCryptos1 } from '../../utils/cryptos'
-import { AreaChart,XAxis, YAxis, Tooltip, Area, ResponsiveContainer } from 'recharts'
-import loadinggif from '../../images/loading.gif'
-import { format } from 'date-fns'
+// import axios from 'axios'
+// import { graphCryptos1 } from '../../utils/cryptos'
+// import { AreaChart,XAxis, YAxis, Tooltip, Area, ResponsiveContainer } from 'recharts'
+// import loadinggif from '../../images/loading.gif'
+// import { format } from 'date-fns'
 
 export default function MarketCap() {
   // const [ crypto, setCrypto ] = useState('bitcoin')

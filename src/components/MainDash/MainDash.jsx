@@ -1,7 +1,7 @@
 import React,{ useState, useEffect } from 'react'
 import styles from './MainDash.module.css'
-import axios from 'axios'
-import loadinggif from '../../images/loading.gif'
+// import axios from 'axios'
+// import loadinggif from '../../images/loading.gif'
 
 
 export default function MainDash({ setSelectedIndex, setCryptoName }) {

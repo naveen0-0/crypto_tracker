@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import styles from './Compare.module.css'
-import axios from 'axios'
 import { graphCryptos1, graphCryptos2 } from '../../utils/cryptos'
-import { AreaChart,XAxis, YAxis, Tooltip, Area, ResponsiveContainer } from 'recharts'
-import loadinggif from '../../images/loading.gif'
-import { format } from 'date-fns'
+// import axios from 'axios'
+// import { AreaChart,XAxis, YAxis, Tooltip, Area, ResponsiveContainer } from 'recharts'
+// import loadinggif from '../../images/loading.gif'
+// import { format } from 'date-fns'
 
 export default function Compare() {
   // const [ crypto1, setCrypto1 ] = useState('bitcoin')
