@@ -1,12 +1,12 @@
 import React,{ useState, useEffect } from 'react'
 import styles from './MainDash.module.css'
-// import axios from 'axios'
-// import loadinggif from '../../images/loading.gif'
+import axios from 'axios'
+import loadinggif from '../../images/loading.gif'
 
 
 export default function MainDash({ setSelectedIndex, setCryptoName }) {
-  // const [coins, setCoins] = useState([]);
-  // const [loading, setLoading] = useState(true);
+  const [coins, setCoins] = useState([]);
+  const [loading, setLoading] = useState(true);
   
 
   // useEffect(() => {
