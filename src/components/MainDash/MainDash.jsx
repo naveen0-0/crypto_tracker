@@ -24,7 +24,7 @@ export default function MainDash({ setSelectedIndex, setCryptoName }) {
     
     setInterval(() => {
       loadData();
-    },2000)
+    },10000)
 
     return () => {
       source.cancel();
