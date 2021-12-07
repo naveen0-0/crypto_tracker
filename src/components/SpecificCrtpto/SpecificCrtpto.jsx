@@ -51,7 +51,6 @@ export default function SpecificCrtpto({ setSelectedIndex, cryptoName }) {
 
   return (
     <div className={styles.content}>
-      Specific Crypto
       <div className={styles.head}>
         <div onClick={() => setSelectedIndex(0)} className={styles.backC}>
           <img src={backimg} alt="Back" className={styles.back}/>
