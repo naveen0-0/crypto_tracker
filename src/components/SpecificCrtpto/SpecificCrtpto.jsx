@@ -40,7 +40,7 @@ export default function SpecificCrtpto({ setSelectedIndex, cryptoName }) {
     
     setInterval(() => {
       loadData();
-    },2000)
+    },10000)
 
     return () => {
       source.cancel();
