@@ -74,9 +74,11 @@ export default function SpecificCrtpto({ setSelectedIndex, cryptoName }) {
           <div className={styles.price}>{price && `$${price.market_data.price_usd.toFixed(1)}`}</div>
         </div>
 
-        <div className={styles.project_details}>
+        {/* <div className={styles.project_details}>
           {profile.profile.general.overview.project_details}
-        </div>
+        </div> */}
+        <div className={styles.project_details} dangerouslySetInnerHTML={{ __html: profile.profile.general.overview.project_details }} />
+
 
         <div className={styles.official_links}>
           {profile.profile.general.overview.official_links.map((official_link,index) => 
