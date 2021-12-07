@@ -89,18 +89,22 @@ export default function SpecificCrtpto({ setSelectedIndex, cryptoName }) {
         </div>
 
         <details className={styles.details}>
-          <div className={styles.background}>
+          <div className={styles.background} dangerouslySetInnerHTML={{ __html: profile.profile.general.background.background_details }} />
+
+          {/* <div className={styles.background}>
             {profile.profile.general.background.background_details}
-          </div>
+          </div> */}
           <summary className={styles.summary}>
             Background
           </summary>
         </details>
 
         <details className={styles.details}>
-          <div className={styles.background}>
+          <div className={styles.background} dangerouslySetInnerHTML={{ __html: profile.profile.general.regulation.regulatory_details }} />
+
+          {/* <div className={styles.background}>
             {profile.profile.general.regulation.regulatory_details}
-          </div>
+          </div> */}
           <summary className={styles.summary}>
             Regulation
           </summary>
@@ -145,9 +149,11 @@ export default function SpecificCrtpto({ setSelectedIndex, cryptoName }) {
 
 
         <details className={styles.details}>
-          <div className={styles.background}>
+          <div className={styles.background} dangerouslySetInnerHTML={{ __html: profile.profile.technology.overview.technology_details }} />
+
+          {/* <div className={styles.background} >
             {profile.profile.technology.overview.technology_details}
-          </div>
+          </div> */}
           <summary className={styles.summary}>
             Technology
           </summary>
@@ -155,9 +161,11 @@ export default function SpecificCrtpto({ setSelectedIndex, cryptoName }) {
 
 
         <details className={styles.details}>
-          <div className={styles.background}>
+          <div className={styles.background} dangerouslySetInnerHTML={{ __html: profile.profile.governance.governance_details }} />
+
+          {/* <div className={styles.background}>
             {profile.profile.governance.governance_details}
-          </div>
+          </div> */}
           <summary className={styles.summary}>
             Governance
           </summary>
