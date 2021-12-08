@@ -12,14 +12,15 @@ export default function HomePage() {
   let components = [<Dashboard/>,<MarketCap/>,<Compare/>,<News/>,<Settings/>]
   
   const [selectedIndex, setSelectedIndex] = useState(0)
+  const [ sidebarOpen, setSidebarOpen ] = useState(true);
 
   return (
     <div className={styles.main}>
-      <div className={styles.burger} onClick={() => console.log("Ham Burger Image")}>
+      <div className={styles.burger} onClick={() => setSidebarOpen(!sidebarOpen)}>
         <img src={hamburgerimg} alt="Hamburger" />
       </div>
-      <div className={styles.sidebarcontainer}>
-        <Sidebar index={selectedIndex} setIndex={setSelectedIndex}/>
+      <div className={sidebarOpen? styles.sidebarcontainer : styles.sidebarcontaineractive}>
+        <Sidebar index={selectedIndex} setIndex={setSelectedIndex} setSidebarOpen={setSidebarOpen} sidebarOpen={sidebarOpen}/>
       </div>
       <div className={styles.component}>
         {components[selectedIndex]}

@@ -8,11 +8,18 @@
 
 
 .title{
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 24px;
-  font-family: "Roboto"
+  font-family: "Roboto";
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .mainimg{
@@ -72,4 +79,14 @@
 
 .sidebarlinkactive{
   background-color: tomato;
+}
+
+.close_img{
+  width: 20px;
+}
+
+@media screen and (min-width:1000px){
+  .close{
+    display: none;
+  }
 }

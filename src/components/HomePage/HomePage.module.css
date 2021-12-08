@@ -9,6 +9,12 @@
   color: #EFEFF0;
 }
 
+.sidebarcontaineractive{
+  width: 220px;
+  background-color: #121317;
+  color: #EFEFF0;
+}
+
 .component{
   flex: 1;
 }
@@ -21,14 +27,22 @@
 
 @media screen and (max-width:1000px){
   .sidebarcontainer{
-    display: none;
+    position: absolute;
+    transform: translate(-100%);
+    z-index: 1;
+    transition: transform 1s ease-in-out 0s
+  }
+  .sidebarcontaineractive{
+    z-index: 1;
+    position: absolute;
+    transition: transform 1s ease-in-out 0s
   }
   .burger{
     display: block;
     background-color: #121317;
     position: absolute;
-    top: 40px;
-    left: 10%;
+    top: 45px;
+    right: 20px;
     transform: translate(-50%,-50%);
     cursor: pointer;
   }

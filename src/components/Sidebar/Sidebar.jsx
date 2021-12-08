@@ -6,17 +6,25 @@ import barimg from '../../images/bar.png'
 import graphimg from '../../images/graph.png'
 import walletimg from '../../images/wallet.png'
 import settingimg from '../../images/settings.svg'
+import closeimg from '../../images/close.png'
 
-export default function Sidebar({ index, setIndex }) {
+export default function Sidebar({ index, setIndex, setSidebarOpen, sidebarOpen }) {
   return (
     <div className={styles.sidebar}>
 
       <div className={styles.title}>
-        <div>
-          <img src={main} alt="MainImg" className={styles.mainimg}/>
+        <div className={styles.logo}>
+          <div>
+            <img src={main} alt="MainImg" className={styles.mainimg}/>
+          </div>
+          <div className={styles.titletext}>
+            Myst
+          </div>
         </div>
-        <div className={styles.titletext}>
-          Myst
+
+
+        <div className={styles.close} onClick={() => setSidebarOpen(!sidebarOpen)}>
+          <img src={closeimg} alt="Close" className={styles.close_img}/>
         </div>
       </div>
 
