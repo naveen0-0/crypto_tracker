@@ -9,11 +9,12 @@
 .select{
   outline: none;
   padding: 5px 10px; 
-  font-family: "lato";
   font-size: 14px;
   border-radius: 5px;
   background-color: #08090e;
   cursor: pointer;
+  font-family: 'Fira Code';
+  width: 100%;
 }
 .select::-webkit-scrollbar {
   width: 5px;
@@ -101,4 +102,19 @@
 .loadinggif img{
   background-color: #09090B;
   width: 100px;
+}
+
+@media screen and (max-width:1000px){
+  .head{
+    height: 120px;
+    display: block;
+  }
+  .news{
+    text-align: center;
+  }
+
+  .select{
+    width: 100%;
+    margin: 20px 0px;
+  }
 }

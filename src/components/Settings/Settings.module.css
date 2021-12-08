@@ -27,7 +27,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3rem;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .content::-webkit-scrollbar {
@@ -41,4 +42,10 @@
 .content::-webkit-scrollbar-thumb {
   background: rgb(112, 112, 112); 
   border-radius: 10px;
+}
+
+@media screen and (max-width:1000px){
+  .head{
+    text-align: center;
+  }
 }

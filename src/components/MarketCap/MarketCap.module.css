@@ -119,3 +119,9 @@
 .value{
   background-color: rgb(73, 73, 73);
 }
+
+@media screen and (max-width:1000px){
+  .dashcontainertitle{
+    text-align: center;
+  }
+}

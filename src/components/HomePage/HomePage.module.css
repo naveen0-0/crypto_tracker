@@ -1,5 +1,6 @@
 .main{
   display: flex;
+  position: relative;
 }
 
 .sidebarcontainer{
@@ -12,8 +13,27 @@
   flex: 1;
 }
 
+
+.burger{
+  display: none;
+}
+
+
 @media screen and (max-width:1000px){
   .sidebarcontainer{
     display: none;
+  }
+  .burger{
+    display: block;
+    background-color: #121317;
+    position: absolute;
+    top: 40px;
+    left: 10%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+  }
+  
+  .burger img{
+    width: 30px;
   }
 }

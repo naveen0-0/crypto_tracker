@@ -6,6 +6,7 @@ import MarketCap from '../MarketCap/MarketCap'
 import Compare from '../Compare/Compare'
 import News from '../News/News'
 import Settings from '../Settings/Settings'
+import hamburgerimg from '../../images/hamburger.png'
 
 export default function HomePage() {
   let components = [<Dashboard/>,<MarketCap/>,<Compare/>,<News/>,<Settings/>]
@@ -14,6 +15,9 @@ export default function HomePage() {
 
   return (
     <div className={styles.main}>
+      <div className={styles.burger} onClick={() => console.log("Ham Burger Image")}>
+        <img src={hamburgerimg} alt="Hamburger" />
+      </div>
       <div className={styles.sidebarcontainer}>
         <Sidebar index={selectedIndex} setIndex={setSelectedIndex}/>
       </div>

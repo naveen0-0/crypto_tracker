@@ -17,6 +17,7 @@
 .dashcontainertitle{
   font-size: 32px;
   font-family: "Fira Code";
+  width: 100%;
 }
 
 .dashinput{
@@ -27,4 +28,10 @@
   color: whitesmoke;
   font-family:cursive;
   background-color: #1A1E23;
+}
+
+@media screen and (max-width:1000px){
+  .dashcontainertitle{
+    text-align: center;
+  }
 }
