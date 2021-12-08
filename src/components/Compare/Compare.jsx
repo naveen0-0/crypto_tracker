@@ -131,7 +131,7 @@ export default function Compare() {
       ): (
       <div className={styles.graph}>
 
-        <ResponsiveContainer width="99%" aspect={3}>
+        <ResponsiveContainer width="99%" height={400}>
           <AreaChart data={data1} margin={{top:50}} className={styles.innergraph}>
             <defs>
               <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
@@ -162,7 +162,7 @@ export default function Compare() {
       ): (
       <div className={styles.graph}>
 
-        <ResponsiveContainer width="99%" aspect={3}>
+        <ResponsiveContainer width="99%" height={400}>
           <AreaChart data={data2} margin={{top:50}} className={styles.innergraph}>
             <defs>
               <linearGradient id="colorPq" x1="0" y1="0" x2="0" y2="1">

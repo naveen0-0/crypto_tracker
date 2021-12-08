@@ -11,3 +11,9 @@
 .component{
   flex: 1;
 }
+
+@media screen and (max-width:1000px){
+  .sidebarcontainer{
+    display: none;
+  }
+}

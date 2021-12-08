@@ -97,7 +97,7 @@ export default function MarketCap() {
         </div>
       ): (
       <div className={styles.graph}>
-        <ResponsiveContainer width="99%" aspect={3}>
+        <ResponsiveContainer width="99%" height={400}>
           <AreaChart data={data} margin={{top:50}} className={styles.innergraph}>
             <defs>
               <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
