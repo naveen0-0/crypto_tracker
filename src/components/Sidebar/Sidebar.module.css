@@ -64,9 +64,9 @@
 .sidebarlinktextactive{
   width: 100%;
   margin-left: 15px;
-  color: black;
+  color: rgb(255, 255, 255);
   cursor: pointer;
-  background:linear-gradient(to left, rgb(76, 204, 119), rgb(116, 199, 255));
+  background:linear-gradient(to right, #015285, #299260);
   padding: 10px;
   border-radius: 999999999px;
 }
@@ -77,9 +77,6 @@
   margin-left: 10px;
 }
 
-.sidebarlinkactive{
-  background-color: tomato;
-}
 
 .close_img{
   width: 20px;
