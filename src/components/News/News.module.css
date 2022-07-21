@@ -71,15 +71,11 @@
 .articles{
   padding: 10px;
   background-color: #09090B;
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit,minmax(200px,1fr))
 }
 
 .articlesC{
   border-radius: 20px;
   background-color: #09090B;
-  
 }
 
 .readmore{
@@ -89,6 +85,7 @@
   color: #bbbbbb;
   background-color: #121317;
   font-weight: bold;
+  border-radius: 999999999999px;
 }
 
 .loadinggif{

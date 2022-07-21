@@ -1,16 +1,15 @@
 .article{
-  min-height: 150px;
+  min-height: 100px;
   padding: 10px;
   border-radius: 5px;
-  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   text-decoration: none;
   position: relative;
   background-color: #121317;
+  margin-bottom: 10px;
 }
 
 .title{
@@ -24,6 +23,6 @@
   color: orange;
   position: absolute;
   bottom: 0px;
-  right: 0px;
+  right: 5px;
   padding: 5px;
 }
